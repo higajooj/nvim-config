@@ -12,10 +12,10 @@ local sources = {
   formatting.standardrb,
   lint.flake8,
   formatting.black,
-  formatting.rustfmt
+  formatting.rustfmt,
 }
 
 null_ls.setup {
   debug = true,
-  sources = sources
+  sources = sources,
 }

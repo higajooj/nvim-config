@@ -4,10 +4,9 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local lspconfig = require "lspconfig"
 local servers = {
   "tsserver",
-  "solargraph",
   "pyright",
   "prismals",
-  "rust_analyzer"
+  "rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do

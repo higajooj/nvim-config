@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = { theme = 'everblush' }
+M.ui = { theme = "everblush" }
 
 M.mappings = require "custom.mappings"
 

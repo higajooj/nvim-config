@@ -1,5 +1,25 @@
 local plugins = {
   {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+        "typescript-language-server",
+        "pyright",
+        "prisma-language-server",
+        "rust-analyzer",
+        "prettier",
+        "htmlbeautifier",
+        "standardrb",
+        "flake8",
+        "black",
+        "rustfmt",
+      },
+    },
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
@@ -13,9 +33,9 @@ local plugins = {
         "css",
         "json",
         "vue",
-        "svelte"
-      }
-    }
+        "svelte",
+      },
+    },
   },
 
   {
@@ -36,13 +56,13 @@ local plugins = {
     "andweeb/presence.nvim",
     lazy = false,
     config = function()
-      require("presence").setup({
+      require("presence").setup {
         show_time = false,
         buttons = false,
-        neovim_image_text = "GIGACHAD TEXT EDITOR"
-      })
-    end
-  }
+        neovim_image_text = "GIGACHAD TEXT EDITOR",
+      }
+    end,
+  },
 }
 
 return plugins

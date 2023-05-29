@@ -27,6 +27,7 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "rust",
         "javascript",
         "typescript",
         "tsx",

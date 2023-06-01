@@ -19,6 +19,7 @@ local plugins = {
 				"flake8",
 				"black",
 				"rustfmt",
+				"ruby-lsp",
 			},
 		},
 	},

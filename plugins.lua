@@ -42,6 +42,7 @@ local plugins = {
 				"vue",
 				"svelte",
 				"python",
+				"markdown",
 			},
 		},
 	},

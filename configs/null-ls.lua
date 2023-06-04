@@ -13,6 +13,8 @@ local sources = {
   lint.flake8,
   formatting.black,
   formatting.rustfmt,
+  formatting.markdownlint,
+  lint.markdownlint,
 }
 
 null_ls.setup {

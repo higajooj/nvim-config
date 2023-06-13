@@ -8,6 +8,7 @@ local servers = {
 	"prismals",
 	"rust_analyzer",
 	"ruby_ls",
+	"emmet_ls",
 }
 
 for _, lsp in ipairs(servers) do

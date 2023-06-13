@@ -24,6 +24,7 @@ local plugins = {
 				"rustfmt",
 				"ruby-lsp",
 				"markdownlint",
+				"emmet-ls",
 			},
 		},
 	},

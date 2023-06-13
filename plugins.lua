@@ -1,5 +1,8 @@
 local plugins = {
 	{
+		"windwp/nvim-ts-autotag",
+	},
+	{
 		"christoomey/vim-tmux-navigator",
 		lazy = false,
 	},
@@ -27,7 +30,11 @@ local plugins = {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		dependencies = "windwp/nvim-ts-autotag",
 		opts = {
+			autotag = {
+				enable = true,
+			},
 			ensure_installed = {
 				"rust",
 				"javascript",

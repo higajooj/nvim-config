@@ -51,6 +51,7 @@ local plugins = {
 				"svelte",
 				"python",
 				"markdown",
+				"prisma",
 			},
 		},
 	},

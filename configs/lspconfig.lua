@@ -8,7 +8,6 @@ local servers = {
 	"prismals",
 	"rust_analyzer",
 	"ruby_ls",
-	"emmet_ls",
 	"cssls",
 }
 
@@ -18,6 +17,25 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.emmet_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = {
+		"css",
+		"eruby",
+		"html",
+		"javascript",
+		"javascriptreact",
+		"less",
+		"sass",
+		"scss",
+		"svelte",
+		"pug",
+		"typescriptreact",
+		"vue",
+	},
+})
 
 local M = {}
 

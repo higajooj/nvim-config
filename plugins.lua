@@ -25,6 +25,7 @@ local plugins = {
 				"ruby-lsp",
 				"markdownlint",
 				"emmet-ls",
+				"css-lsp",
 			},
 		},
 	},
@@ -75,6 +76,7 @@ local plugins = {
 		config = function(_, opts)
 			require("plugins.configs.others").luasnip(opts)
 			require("luasnip").filetype_extend("typescriptreact", { "html" })
+			require("luasnip").filetype_extend("javascript", { "html" })
 		end,
 	},
 

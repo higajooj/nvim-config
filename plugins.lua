@@ -16,7 +16,7 @@ local plugins = {
 				"pyright",
 				"prisma-language-server",
 				"rust-analyzer",
-				"prettier",
+				"prettierd",
 				"htmlbeautifier",
 				"standardrb",
 				"flake8",

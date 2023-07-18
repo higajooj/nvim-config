@@ -97,6 +97,20 @@ M.tabufline = {
 			end,
 			"goto prev buffer",
 		},
+
+		["[b"] = {
+			function()
+				require("nvchad_ui.tabufline").move_buf(-1)
+			end,
+			"move buffer left",
+		},
+
+		["]b"] = {
+			function()
+				require("nvchad_ui.tabufline").move_buf(1)
+			end,
+			"move buffer right",
+		},
 	},
 }
 

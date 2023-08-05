@@ -26,6 +26,7 @@ local plugins = {
 				"markdownlint",
 				"emmet-ls",
 				"css-lsp",
+				"clang-format",
 			},
 		},
 	},

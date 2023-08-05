@@ -20,6 +20,7 @@ local sources = {
 	formatting.rustfmt,
 	formatting.markdownlint,
 	lint.markdownlint,
+	formatting.clang_format,
 }
 
 null_ls.setup({

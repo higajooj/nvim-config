@@ -91,28 +91,28 @@ M.tabufline = {
 	n = {
 		["<S-l>"] = {
 			function()
-				require("nvchad_ui.tabufline").tabuflineNext()
+				require("nvchad.tabufline").tabuflineNext()
 			end,
 			"goto next buffer",
 		},
 
 		["<S-h>"] = {
 			function()
-				require("nvchad_ui.tabufline").tabuflinePrev()
+				require("nvchad.tabufline").tabuflinePrev()
 			end,
 			"goto prev buffer",
 		},
 
 		["[b"] = {
 			function()
-				require("nvchad_ui.tabufline").move_buf(-1)
+				require("nvchad.tabufline").move_buf(-1)
 			end,
 			"move buffer left",
 		},
 
 		["]b"] = {
 			function()
-				require("nvchad_ui.tabufline").move_buf(1)
+				require("nvchad.tabufline").move_buf(1)
 			end,
 			"move buffer right",
 		},

@@ -40,6 +40,7 @@ local plugins = {
 			},
 			ensure_installed = {
 				"rust",
+				"graphql",
 				"javascript",
 				"typescript",
 				"tsx",

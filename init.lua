@@ -11,3 +11,9 @@ if in_wsl then
 		cache_enabled = true,
 	}
 end
+
+vim.cmd([[
+   augroup ilikecursorline
+      autocmd VimEnter * :highlight CursorLine guibg=#282a2e
+   augroup END
+]])

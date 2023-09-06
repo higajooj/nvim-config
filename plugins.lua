@@ -21,7 +21,6 @@ local plugins = {
 				"standardrb",
 				"flake8",
 				"black",
-				"rustfmt",
 				"ruby-lsp",
 				"markdownlint",
 				"emmet-ls",

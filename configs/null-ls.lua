@@ -9,7 +9,7 @@ local xq = formatting.xq.with({
 
 local sources = {
 	formatting.stylua,
-	formatting.prettierd,
+	formatting.prettier,
 	formatting.htmlbeautifier,
 	xq,
 	lint.erb_lint,

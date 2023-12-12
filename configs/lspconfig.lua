@@ -8,6 +8,7 @@ local servers = {
 	"prismals",
 	"rust_analyzer",
 	"cssls",
+	"eslint",
 }
 
 for _, lsp in ipairs(servers) do
@@ -82,7 +83,7 @@ end
 lspconfig.ruby_ls.setup({
 	on_attach = function(client, buffer)
 		setup_diagnostics(client, buffer)
-    on_attach(client, buffer)
+		on_attach(client, buffer)
 	end,
 })
 

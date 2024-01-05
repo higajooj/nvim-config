@@ -15,8 +15,6 @@ local plugins = {
 				"typescript-language-server",
 				"pyright",
 				"prisma-language-server",
-				"rust-analyzer",
-				"prettier",
 				"htmlbeautifier",
 				"standardrb",
 				"flake8",

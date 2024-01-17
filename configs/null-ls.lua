@@ -8,19 +8,19 @@ local xq = formatting.xq.with({
 })
 
 local sources = {
+	xq,
+	formatting.clang_format,
 	formatting.stylua,
 	formatting.prettier,
 	formatting.htmlbeautifier,
-	xq,
-	lint.erb_lint,
-	lint.standardrb,
 	formatting.standardrb,
-	lint.flake8,
 	formatting.black,
 	formatting.rustfmt,
 	formatting.markdownlint,
+	lint.erb_lint,
+	lint.standardrb,
+	lint.flake8,
 	lint.markdownlint,
-	formatting.clang_format,
 }
 
 null_ls.setup({

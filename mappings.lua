@@ -22,11 +22,12 @@ M.general = {
 
 		["<leader>q"] = { "<cmd> q <CR>", "close" },
 
+		--  format with conform
 		["<leader>fm"] = {
 			function()
-				vim.lsp.buf.format({ async = true })
+				require("conform").format()
 			end,
-			"lsp formatting",
+			"formatting",
 		},
 
 		["<leader>tt"] = {
@@ -55,33 +56,6 @@ M.general = {
 
 		["<"] = { "<gv", "indent left" },
 		[">"] = { ">gv", "indent right" },
-	},
-}
-
-M.lspconfig = {
-	plugin = true,
-
-	n = {
-		["<leader>la"] = {
-			function()
-				vim.lsp.buf.add_workspace_folder()
-			end,
-			"add workspace folder",
-		},
-
-		["<leader>lr"] = {
-			function()
-				vim.lsp.buf.remove_workspace_folder()
-			end,
-			"remove workspace folder",
-		},
-
-		["<leader>ll"] = {
-			function()
-				print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-			end,
-			"list workspace folders",
-		},
 	},
 }
 

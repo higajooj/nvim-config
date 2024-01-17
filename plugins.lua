@@ -1,84 +1,49 @@
+local overrides = require("custom.configs.overrides")
+
+---@type NvPluginSpec[]
 local plugins = {
-	{
-		"windwp/nvim-ts-autotag",
-	},
-	{
-		"christoomey/vim-tmux-navigator",
-		lazy = false,
-	},
-	{
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"lua-language-server",
-				"stylua",
-				"typescript-language-server",
-				"pyright",
-				"prisma-language-server",
-				"htmlbeautifier",
-				"standardrb",
-				"flake8",
-				"black",
-				"ruby-lsp",
-				"markdownlint",
-				"emmet-ls",
-				"css-lsp",
-				"clang-format",
-			},
-		},
-	},
+	{ "williamboman/mason.nvim", enabled = false },
+
+	{ "windwp/nvim-ts-autotag" },
+
+	{ "christoomey/vim-tmux-navigator", lazy = false },
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		dependencies = "windwp/nvim-ts-autotag",
-		opts = {
-			autotag = {
-				enable = true,
-			},
-			ensure_installed = {
-				"rust",
-				"ruby",
-				"graphql",
-				"javascript",
-				"typescript",
-				"tsx",
-				"c",
-				"cpp",
-				"rust",
-				"html",
-				"css",
-				"json",
-				"vue",
-				"svelte",
-				"python",
-				"markdown",
-				"prisma",
-			},
-		},
+		opts = overrides.treesitter,
 	},
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = overrides.nvimtree,
+  },
 
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = {
-			"jose-elias-alvarez/null-ls.nvim",
-			config = function()
-				require("custom.configs.null-ls")
-			end,
-		},
 		config = function()
 			require("plugins.configs.lspconfig")
 			require("custom.configs.lspconfig")
 		end,
 	},
 
-	{
-		"L3MON4D3/LuaSnip",
-		config = function(_, opts)
-			require("plugins.configs.others").luasnip(opts)
-			require("luasnip").filetype_extend("typescriptreact", { "html" })
-			require("luasnip").filetype_extend("javascript", { "html" })
-		end,
-	},
+
+	-- {
+	-- 	"L3MON4D3/LuaSnip",
+	-- 	config = function(_, opts)
+	-- 		require("plugins.configs.others").luasnip(opts)
+	-- 		require("luasnip").filetype_extend("typescriptreact", { "html" })
+	-- 		require("luasnip").filetype_extend("javascript", { "html" })
+	-- 	end,
+	-- },
+
+  {
+    "stevearc/conform.nvim",
+    --  for users those who want auto-save conform + lazyloading!
+    -- event = "BufWritePre"
+    config = function()
+      require "custom.configs.conform"
+    end,
+  },
 
 	{
 		"andweeb/presence.nvim",
@@ -91,6 +56,20 @@ local plugins = {
 			})
 		end,
 	},
+
+	-- To make a plugin not be loaded
+	-- {
+	--   "NvChad/nvim-colorizer.lua",
+	--   enabled = false
+	-- },
+
+	-- All NvChad plugins are lazy-loaded by default
+	-- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
+	-- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
+	-- {
+	--   "mg979/vim-visual-multi",
+	--   lazy = false,
+	-- }
 }
 
 return plugins

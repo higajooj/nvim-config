@@ -4,19 +4,18 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 	{ "williamboman/mason.nvim", enabled = false },
 
-	{ "windwp/nvim-ts-autotag" },
-
 	{ "christoomey/vim-tmux-navigator", lazy = false },
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		dependencies = "windwp/nvim-ts-autotag",
 		opts = overrides.treesitter,
 	},
 
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
+	{
+		"nvim-tree/nvim-tree.lua",
+		opts = overrides.nvimtree,
+	},
 
 	{
 		"neovim/nvim-lspconfig",
@@ -26,24 +25,12 @@ local plugins = {
 		end,
 	},
 
-
-	-- {
-	-- 	"L3MON4D3/LuaSnip",
-	-- 	config = function(_, opts)
-	-- 		require("plugins.configs.others").luasnip(opts)
-	-- 		require("luasnip").filetype_extend("typescriptreact", { "html" })
-	-- 		require("luasnip").filetype_extend("javascript", { "html" })
-	-- 	end,
-	-- },
-
-  {
-    "stevearc/conform.nvim",
-    --  for users those who want auto-save conform + lazyloading!
-    -- event = "BufWritePre"
-    config = function()
-      require "custom.configs.conform"
-    end,
-  },
+	{
+		"stevearc/conform.nvim",
+		config = function()
+			require("custom.configs.conform")
+		end,
+	},
 
 	{
 		"andweeb/presence.nvim",

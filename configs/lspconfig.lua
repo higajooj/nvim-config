@@ -3,8 +3,8 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 
 local lspconfig = require("lspconfig")
 local servers = {
-  "ccls",
-  "rust_analyzer",
+	"ccls",
+	"rust_analyzer",
 	"tsserver",
 	"pyright",
 	"prismals",

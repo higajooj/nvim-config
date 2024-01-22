@@ -1,7 +1,6 @@
 local M = {}
 
 M.treesitter = {
-	dependencies = "windwp/nvim-ts-autotag",
 	ensure_installed = {
 		"c",
 		"cpp",
@@ -20,15 +19,8 @@ M.treesitter = {
 		"python",
 		"markdown",
 	},
-	autotag = {
-		enable = true,
-	},
-	indent = {
-		enable = true,
-		-- disable = {
-		--   "python"
-		-- },
-	},
+	autotag = { enable = true },
+	indent = { enable = true },
 }
 
 return M

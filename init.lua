@@ -1,4 +1,5 @@
 vim.opt.colorcolumn = "80"
+vim.opt.rnu = true
 
 vim.cmd([[
    augroup ilikecursorline

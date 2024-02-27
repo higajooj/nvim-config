@@ -24,8 +24,8 @@ local options = {
 
 	formatters_by_ft = {
 		lua = { "stylua" },
-		c = { "astyle" },
-		cpp = { "astyle" },
+		c = { "clang_format" },
+		cpp = { "clang_format" },
 		javascript = { "biome_sort_imports" },
 		javascriptreact = { "biome_sort_imports" },
 		typescriptreact = { "biome_sort_imports" },

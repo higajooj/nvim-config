@@ -27,6 +27,7 @@ local options = {
 		c = { "clang_format" },
 		cpp = { "clang_format" },
 		javascript = { "biome_sort_imports" },
+		typescript = { "biome_sort_imports" },
 		javascriptreact = { "biome_sort_imports" },
 		typescriptreact = { "biome_sort_imports" },
 		json = { "biome" },

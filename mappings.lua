@@ -22,12 +22,17 @@ M.general = {
 
 		["<leader>q"] = { "<cmd> q <CR>", "close" },
 
-		--  format with conform
 		["<leader>fm"] = {
 			function()
 				require("conform").format()
 			end,
-			"formatting",
+			"format",
+		},
+		["<leader>fp"] = {
+			function()
+				require("conform").format({ formatters = { "prettierd" } })
+			end,
+			"format (prettier)",
 		},
 
 		["<leader>tt"] = {

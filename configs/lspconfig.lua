@@ -6,9 +6,13 @@ local servers = {
 	"ccls",
 	"rust_analyzer",
 	"tsserver",
+	"jsonls",
+	-- "vtsls",
+	"emmet_language_server",
 	"pyright",
 	"prismals",
 	"cssls",
+	"jdtls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -17,25 +21,6 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
-
-lspconfig.emmet_ls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	filetypes = {
-		"css",
-		"eruby",
-		"html",
-		"javascript",
-		"javascriptreact",
-		"less",
-		"sass",
-		"scss",
-		"svelte",
-		"pug",
-		"typescriptreact",
-		"vue",
-	},
-})
 
 local M = {}
 

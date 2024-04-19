@@ -26,14 +26,16 @@ local options = {
 		lua = { "stylua" },
 		c = { "clang_format" },
 		cpp = { "clang_format" },
+		python = { "black" },
 		javascript = { "biome_sort_imports" },
 		typescript = { "biome_sort_imports" },
 		javascriptreact = { "biome_sort_imports" },
 		typescriptreact = { "biome_sort_imports" },
-		json = { "biome" },
 		html = { "prettierd" },
 		css = { "prettierd" },
 		scss = { "prettierd" },
+		json = { "biome" },
+		terraform = { "terraform_fmt" },
 	},
 }
 

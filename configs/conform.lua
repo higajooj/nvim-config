@@ -36,6 +36,8 @@ local options = {
 		scss = { "prettierd" },
 		json = { "biome" },
 		terraform = { "terraform_fmt" },
+		sh = { "shfmt" },
+		markdown = { "prettierd" },
 	},
 }
 

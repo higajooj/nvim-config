@@ -20,6 +20,18 @@ local options = {
 				"$FILENAME",
 			},
 		},
+		-- docker_utils = {
+		-- 	meta = {
+		-- 		url = "https://github.com/rcjsuen/dockerfile-utils",
+		-- 		description = "A library and command line interface for formatting and linting Dockerfiles.",
+		-- 	},
+		-- 	command = "dockerfile-utils",
+		-- 	stdin = true,
+		-- 	args = {
+		-- 		"format",
+		-- 		"$FILENAME",
+		-- 	},
+		-- },
 	},
 
 	formatters_by_ft = {

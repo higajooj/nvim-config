@@ -22,6 +22,7 @@ M.treesitter = {
 		"terraform",
 		"bash",
 		"yaml",
+		"dockerfile",
 	},
 	autotag = { enable = true },
 	indent = { enable = true },

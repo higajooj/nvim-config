@@ -8,7 +8,13 @@ local plugins = {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
-		dependencies = "windwp/nvim-ts-autotag",
+		dependencies = {
+			{
+				"windwp/nvim-ts-autotag",
+				lazy = false,
+				config = true,
+			},
+		},
 		opts = overrides.treesitter,
 	},
 

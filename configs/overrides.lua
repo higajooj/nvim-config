@@ -23,8 +23,8 @@ M.treesitter = {
 		"bash",
 		"yaml",
 		"dockerfile",
+		"xml",
 	},
-	autotag = { enable = true },
 	indent = { enable = true },
 }
 

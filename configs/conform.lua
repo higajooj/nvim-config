@@ -1,8 +1,6 @@
 local util = require("conform.util")
 
 local options = {
-	lsp_fallback = true,
-
 	formatters = {
 		biome_sort_imports = {
 			meta = {

@@ -21,6 +21,7 @@ M.treesitter = {
 		"python",
 		"ruby",
 		"rust",
+		"scss",
 		"svelte",
 		"terraform",
 		"tsx",

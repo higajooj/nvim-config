@@ -15,10 +15,10 @@ M.general = {
 		["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
 		["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
 
-		["<C-Up>"] = { "<C-w>+", "increase window height" },
-		["<C-Down>"] = { "<C-w>-", "decrease window height" },
-		["<C-Left>"] = { "<C-w><", "decrease window width" },
-		["<C-Right>"] = { "<C-w>>", "increase window width" },
+		["<C-Up>"] = { "5<C-w>+", "increase window height" },
+		["<C-Down>"] = { "5<C-w>-", "decrease window height" },
+		["<C-Left>"] = { "5<C-w><", "decrease window width" },
+		["<C-Right>"] = { "5<C-w>>", "increase window width" },
 
 		["<leader>q"] = { "<cmd> q <CR>", "close" },
 

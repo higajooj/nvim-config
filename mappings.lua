@@ -112,4 +112,13 @@ M.telescope = {
 	},
 }
 
+M.nvimtree = {
+	plugin = true,
+
+	n = {
+		["<C-PageUp>"] = { ":NvimTreeResize -10<CR>", "decrease nvimtree" },
+		["<C-PageDown>"] = { ":NvimTreeResize +10<CR>", "increase nvimtree" },
+	},
+}
+
 return M

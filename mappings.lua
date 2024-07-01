@@ -32,7 +32,7 @@ M.general = {
 		},
 		["<leader>fp"] = {
 			function()
-				require("conform").format({ formatters = { "prettierd" } })
+				require("conform").format({ formatters = { "prettier" } })
 			end,
 			"format (prettier)",
 		},

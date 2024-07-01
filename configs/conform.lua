@@ -41,13 +41,13 @@ local options = {
 		typescript = { "biome_sort_imports" },
 		javascriptreact = { "biome_sort_imports" },
 		typescriptreact = { "biome_sort_imports" },
-		html = { "prettierd" },
-		css = { "prettierd" },
-		scss = { "prettierd" },
+		html = { "prettier" },
+		css = { "prettier" },
+		scss = { "prettier" },
 		json = { "biome" },
 		terraform = { "terraform_fmt" },
 		sh = { "shfmt" },
-		markdown = { "prettierd" },
+		markdown = { "prettier" },
 	},
 }
 

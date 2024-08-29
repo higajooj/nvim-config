@@ -1,28 +1,37 @@
-vim.opt.colorcolumn = "80"
-vim.opt.rnu = true
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
+vim.g.mapleader = " "
 
--- visible column at 80 chars
-vim.cmd([[
-   augroup ilikecursorline
-      autocmd VimEnter * :highlight CursorLine guibg=#282a2e
-   augroup END
-]])
+-- bootstrap lazy and all plugins
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
--- hyprlang auto detection
-vim.filetype.add({
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-})
+if not vim.uv.fs_stat(lazypath) then
+  local repo = "https://github.com/folke/lazy.nvim.git"
+  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+end
 
--- ansible auto detection
-vim.filetype.add({
-  pattern = { [".*/ansible/.*%.yml"] = "yaml.ansible" },
-})
+vim.opt.rtp:prepend(lazypath)
 
--- jinja
-vim.filetype.add {
-  extension = {
-    jinja = 'jinja',
-    jinja2 = 'jinja',
-    j2 = 'jinja',
+local lazy_config = require "configs.lazy"
+
+-- load plugins
+require("lazy").setup({
+  {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
   },
-}
+
+  { import = "plugins" },
+}, lazy_config)
+
+-- load theme
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
+
+require "options"
+require "nvchad.autocmds"
+
+vim.schedule(function()
+  require "mappings"
+end)

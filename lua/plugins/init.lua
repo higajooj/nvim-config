@@ -8,7 +8,18 @@ return {
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      local options = require "nvchad.configs.telescope"
+      table.insert(options.extensions_list, "fzf")
+
+      return options
+    end,
+  },
+
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -30,6 +41,7 @@ return {
 
   {
     "andweeb/presence.nvim",
+    enabled = false,
     lazy = false,
     config = function()
       require("presence").setup {

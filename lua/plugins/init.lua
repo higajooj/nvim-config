@@ -41,7 +41,7 @@ return {
 
   {
     "andweeb/presence.nvim",
-    enabled = false,
+    -- enabled = false,
     lazy = false,
     config = function()
       require("presence").setup {

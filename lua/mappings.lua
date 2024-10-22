@@ -76,3 +76,7 @@ end)
 -- nvimtree
 map("n", "<C-PageUp>", ":NvimTreeResize -10<CR>", { desc = "decrease nvimtree" })
 map("n", "<C-PageDown>", ":NvimTreeResize +10<CR>", { desc = "increase nvimtree" })
+
+-- Gitsigns
+map("n", "<leader>gb", ":Gitsigns blame_line<CR>", { desc = "git blame line" })
+map("n", "<leader>gB", ":Gitsigns blame<CR>", { desc = "git blame" })

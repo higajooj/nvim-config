@@ -48,6 +48,7 @@ local options = {
     terraform = { "terraform_fmt" },
     sh = { "shfmt" },
     markdown = { "prettier" },
+    yaml = { "prettier" },
   },
 }
 

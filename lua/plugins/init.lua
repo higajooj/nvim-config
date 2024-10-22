@@ -8,13 +8,17 @@ return {
     opts = require "configs.conform",
   },
 
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  -- { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
+  },
 
   {
     "nvim-telescope/telescope.nvim",
     opts = function()
       local options = require "nvchad.configs.telescope"
-      table.insert(options.extensions_list, "fzf")
+      require("telescope").load_extension "fzf"
 
       return options
     end,

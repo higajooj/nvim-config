@@ -25,6 +25,17 @@ return {
   },
 
   {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      local options = require "nvchad.configs.nvimtree"
+
+      options.view.width = 50
+
+      return options
+    end,
+  },
+
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"

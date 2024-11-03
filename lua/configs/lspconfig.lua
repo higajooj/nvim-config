@@ -15,6 +15,7 @@ local servers = {
   "lemminx",
   "prismals",
   "pyright",
+  "ruby_lsp",
   "rust_analyzer",
   "terraformls",
   "ts_ls",

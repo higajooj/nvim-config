@@ -8,6 +8,18 @@ return {
     opts = require "configs.conform",
   },
 
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+      -- log_level = 'debug',
+    },
+  },
+
   -- { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   {
     "nvim-telescope/telescope-fzf-native.nvim",

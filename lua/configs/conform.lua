@@ -49,6 +49,7 @@ local options = {
     sh = { "shfmt" },
     markdown = { "prettier" },
     yaml = { "prettier" },
+    ruby = { "standardrb" },
   },
 }
 

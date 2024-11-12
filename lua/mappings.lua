@@ -25,7 +25,7 @@ map("n", "<leader>q", "<cmd> q <CR>", { desc = "close" })
 
 -- conform
 map("n", "<leader>fm", function()
-  require("conform").format { lsp_fallback = true }
+  require("conform").format { lsp_fallback = true, timeout_ms = 3000 }
 end, { desc = "format" })
 map("n", "<leader>fp", function()
   require("conform").format { formatters = { "prettier" } }

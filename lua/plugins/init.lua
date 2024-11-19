@@ -70,12 +70,10 @@ return {
     "andweeb/presence.nvim",
     -- enabled = false,
     lazy = false,
-    config = function()
-      require("presence").setup {
-        show_time = false,
-        buttons = false,
-        neovim_image_text = "GIGACHAD TEXT EDITOR",
-      }
-    end,
+    opts = {
+      show_time = false,
+      buttons = false,
+      neovim_image_text = "GIGACHAD TEXT EDITOR",
+    },
   },
 }

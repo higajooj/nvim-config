@@ -19,6 +19,7 @@ local servers = {
   "rust_analyzer",
   "terraformls",
   "ts_ls",
+  -- "standardrb",
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"

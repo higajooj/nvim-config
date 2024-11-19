@@ -18,6 +18,9 @@ local options = {
         "$FILENAME",
       },
     },
+    shfmt = {
+      prepend_args = { "-i", "2" },
+    },
   },
 
   formatters_by_ft = {

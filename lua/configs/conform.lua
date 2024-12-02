@@ -38,6 +38,7 @@ local options = {
     json = { "biome" },
     terraform = { "terraform_fmt" },
     sh = { "shfmt" },
+    zsh = { "shfmt" },
     markdown = { "prettier" },
     yaml = { "prettier" },
     ruby = { "standardrb" },

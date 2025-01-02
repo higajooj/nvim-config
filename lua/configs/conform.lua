@@ -21,6 +21,9 @@ local options = {
     shfmt = {
       prepend_args = { "-i", "2" },
     },
+    htmlbeautifier = {
+      prepend_args = { "-b", "1" },
+    },
   },
 
   formatters_by_ft = {
@@ -42,6 +45,7 @@ local options = {
     markdown = { "prettier" },
     yaml = { "prettier" },
     ruby = { "standardrb" },
+    eruby = { "htmlbeautifier" },
   },
 }
 

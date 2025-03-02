@@ -46,6 +46,7 @@ local options = {
     yaml = { "prettier" },
     ruby = { "standardrb" },
     eruby = { "htmlbeautifier" },
+    sql = { "pg_format" },
   },
 }
 

@@ -12,8 +12,10 @@ local options = {
       args = {
         "check",
         "--formatter-enabled=true",
-        "--linter-enabled=false",
-        "--apply",
+        "--assist-enabled=true",
+        "--linter-enabled=true",
+        "--write",
+        "--unsafe",
         "--stdin-file-path",
         "$FILENAME",
       },

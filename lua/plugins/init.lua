@@ -92,17 +92,26 @@ return {
     event = "VeryLazy",
     version = false, -- Never set this value to "*"! Never!
     opts = {
-      provider = "openai",
-      openai = {
-        model = "gpt-4o-mini",
+      provider = "gemini",
+      openai = { model = "gpt-4o-mini", },
+      claude = {
+        model = "claude-3-5-haiku-latest",
+        max_tokens = 8192,
       },
-      -- cursor_applying_provider = 'groq',     -- In this example, use Groq for applying, but you can also use any provider you want.
-      behaviour = {
-        enable_cursor_planning_mode = true,
+      vendors = {
+        groq = {
+          __inherited_from = "openai",
+          api_key_name = "GROQ_API_KEY",
+          endpoint = "https://api.groq.com/openai/v1/",
+          model = "llama-3.3-70b-versatile",
+        },
       },
+      -- cursor_applying_provider = 'gemini',
+      -- behaviour = {
+      --   enable_cursor_planning_mode = true,
+      -- },
     },
     build = "make",
-    -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",

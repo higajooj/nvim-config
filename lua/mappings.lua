@@ -85,3 +85,6 @@ map("n", "<leader>gB", ":Gitsigns blame<CR>", { desc = "git blame" })
 map("n", "<leader>aa", ":CodeCompanionChat Toggle<CR>", { desc = "toggle CodeCompanion chat window" })
 map("n", "<leader>an", ":CodeCompanionChat<CR>", { desc = "start new CodeCompanion chat" })
 map("n", "<leader>al", ":CodeCompanionActions<CR>", { desc = "open CodeCompanion actions menu" })
+
+-- set ft
+map("n", "<leader>p0", ":set ft=json<CR>", { desc = "set ft=json" })

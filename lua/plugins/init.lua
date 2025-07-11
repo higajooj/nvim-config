@@ -128,14 +128,23 @@ return {
     opts = {
       strategies = {
         chat = {
-          adapter = "gemini",
+          adapter = {
+            name = 'openai',
+            model = "o4-mini-2025-04-16",
+          },
         },
         inline = {
-          adapter = "gemini",
+          adapter = {
+            name = 'openai',
+            model = "o4-mini-2025-04-16",
+          },
         },
         cmd = {
-          adapter = "gemini",
-        },
+          adapter = {
+            name = 'openai',
+            model = "o4-mini-2025-04-16",
+          },
+        }
       },
     },
   },

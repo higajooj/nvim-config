@@ -78,6 +78,24 @@ return {
   },
 
   {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+    dependencies = {
+      "saghen/blink.cmp",
+      "nvim-treesitter/nvim-treesitter"
+    },
+    opts = {
+      experimental = {
+        check_rtp_message = false
+      },
+      preview = {
+        filetypes = { "markdown", "codecompanion" },
+        ignore_buftypes = {},
+      },
+    },
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
       {
@@ -97,20 +115,6 @@ return {
       show_time = false,
       buttons = false,
       neovim_image_text = "GIGACHAD TEXT EDITOR",
-    },
-  },
-
-  {
-    "OXY2DEV/markview.nvim",
-    lazy = false,
-    dependencies = {
-      "saghen/blink.cmp"
-    },
-    opts = {
-      preview = {
-        filetypes = { "markdown", "codecompanion" },
-        ignore_buftypes = {},
-      },
     },
   },
 

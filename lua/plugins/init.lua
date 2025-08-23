@@ -129,20 +129,20 @@ return {
       strategies = {
         chat = {
           adapter = {
-            name = 'openai',
-            model = "o4-mini-2025-04-16",
+            name = 'gemini',
+            model = 'gemini-2.5-flash'
           },
         },
         inline = {
           adapter = {
-            name = 'openai',
-            model = "o4-mini-2025-04-16",
+            name = 'gemini',
+            model = 'gemini-2.5-flash'
           },
         },
         cmd = {
           adapter = {
-            name = 'openai',
-            model = "o4-mini-2025-04-16",
+            name = 'gemini',
+            model = 'gemini-2.5-flash'
           },
         }
       },

@@ -126,6 +126,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
+      ignore_warnings = true,
       strategies = {
         chat = {
           adapter = {

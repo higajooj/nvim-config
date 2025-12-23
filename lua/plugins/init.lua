@@ -13,15 +13,6 @@ return {
 
   {
     "saghen/blink.cmp",
-    opts = function()
-      local options = require "nvchad.blink.config"
-
-      options.sources.per_filetype = {
-        codecompanion = { "codecompanion" },
-      }
-
-      return options
-    end,
   },
 
   { "christoomey/vim-tmux-navigator", lazy = false },
@@ -88,10 +79,6 @@ return {
       experimental = {
         check_rtp_message = false
       },
-      preview = {
-        filetypes = { "markdown", "codecompanion" },
-        ignore_buftypes = {},
-      },
     },
   },
 
@@ -115,38 +102,6 @@ return {
       show_time = false,
       buttons = false,
       neovim_image_text = "GIGACHAD TEXT EDITOR",
-    },
-  },
-
-  {
-    "olimorris/codecompanion.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    opts = {
-      ignore_warnings = true,
-      strategies = {
-        chat = {
-          adapter = {
-            name = 'gemini',
-            model = 'gemini-2.5-flash'
-          },
-        },
-        inline = {
-          adapter = {
-            name = 'gemini',
-            model = 'gemini-2.5-flash'
-          },
-        },
-        cmd = {
-          adapter = {
-            name = 'gemini',
-            model = 'gemini-2.5-flash'
-          },
-        }
-      },
     },
   },
 }

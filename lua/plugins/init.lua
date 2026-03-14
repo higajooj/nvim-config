@@ -57,6 +57,9 @@ return {
 
       options.view.width = 50
 
+      options.git = options.git or {}
+      options.git.timeout = 2000
+
       return options
     end,
   },
@@ -104,4 +107,22 @@ return {
       neovim_image_text = "GIGACHAD TEXT EDITOR",
     },
   },
+
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "olimorris/neotest-rspec",
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-rspec")
+        },
+      })
+    end
+  }
 }

@@ -3,10 +3,12 @@ require("nvchad.configs.lspconfig").defaults()
 
 local servers = {
   "ansiblels",
-  "ccls",
+  -- "ccls",
+  "clangd",
   "cssls",
   "dockerls",
   "emmet_language_server",
+  "herb_ls",
   "jdtls",
   "jinja_lsp",
   "jsonls",

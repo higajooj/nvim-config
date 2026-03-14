@@ -20,6 +20,14 @@ local options = {
         "$FILENAME",
       },
     },
+    herb = {
+      meta = {
+        url = "https://herb-tools.dev/projects/formatter",
+        description = "Herb formatter",
+      },
+      command = util.from_node_modules "herb-format",
+      stdin = true,
+    },
     shfmt = {
       prepend_args = { "-i", "2" },
     },
@@ -32,6 +40,7 @@ local options = {
     lua = { "stylua" },
     c = { "clang_format" },
     cpp = { "clang_format" },
+    eruby = { "herb" },
     python = { "black" },
     javascript = { "biome_sort_imports" },
     typescript = { "biome_sort_imports" },
@@ -47,7 +56,6 @@ local options = {
     markdown = { "prettier" },
     yaml = { "prettier" },
     ruby = { "standardrb" },
-    eruby = { "htmlbeautifier" },
     sql = { "pg_format" },
   },
 }

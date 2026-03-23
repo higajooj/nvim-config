@@ -3,8 +3,6 @@ require("nvchad.configs.lspconfig").defaults()
 
 local servers = {
   "ansiblels",
-  -- "ccls",
-  "clangd",
   "cssls",
   "dockerls",
   "emmet_language_server",
@@ -24,3 +22,16 @@ local servers = {
 }
 
 vim.lsp.enable(servers)
+
+vim.lsp.config("clangd", {
+  cmd = {
+    "clangd",
+    "--query-driver=/usr/bin/gcc*",
+    "--background-index",
+    "--clang-tidy",
+    "--completion-style=detailed",
+    "--header-insertion=never",
+    "--all-scopes-completion",
+  },
+})
+vim.lsp.enable("clangd")

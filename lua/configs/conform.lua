@@ -50,6 +50,7 @@ local options = {
     css = { "prettier" },
     scss = { "prettier" },
     json = { "biome" },
+    jsonc = { "biome" },
     terraform = { "terraform_fmt" },
     sh = { "shfmt" },
     zsh = { "shfmt" },
